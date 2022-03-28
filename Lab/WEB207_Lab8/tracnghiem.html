@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col">
+        <div class="card bg-dark border-info mb-2" ng-repeat="(index,q) in cauhoi">
+            <div class="card-header bg-info text-white">
+                <span class="float-left">Câu {{index+1}}: <b>{{q.Text}}</b></span>
+                <span class="badge badge-danger float-right p-2">{{q.Marks}} điểm</span>
+            </div>
+            <div class="card-body">
+                <p class="card-text" ng-repeat="ans in q.Answers">
+                    <input type="radio" name="ans" value="{{ans.Id}}"> {{ans.Text}}
+                </p>
+            </div>
+        </div>
+        <div class="py-2">
+            <button class="btn btn-primary" ng-click="prev()">Trang trước</button>
+            <button class="btn btn-primary" ng-click="next()">Trang kế</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="card border-0">
+    <div class="card-header bg-primary text-white rounded-0"><i class="bi bi-list"></i> MÔN HỌC</div>
+    <ul class="list-group" ng-repeat="mh in subjects|orderBy:'Name'">
+        <li class="list-group-item bg-dark rounded-0">
+            <a href="#!tracnghiem/{{mh. Id}}/{{mh.Name}}">{{mh.Name|uppercase}}</a>
+        </li>
+    </ul>
+</div>

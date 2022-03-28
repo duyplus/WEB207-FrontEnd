@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/poly.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="js/listnv.js"></script>
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("myctrl", myfunc);
+        function myfunc($scope) {
+            var u = sessionStorage.getItem("username");
+            var ht = sessionStorage.getItem("fullname");
+            var e = sessionStorage.getItem("email");
+            if (u != "" && ht != "" && e != "") {
+                $scope.username = u;
+                $scope.fullname = ht;
+                $scope.email = e;
+            }
+        }
+    </script>
+</head>
+
+<body ng-app="myapp">
+    <div class="container" ng-controller="myctrl">
+        <div class="card bg-dark mt-2">
+            <div class="bg-danger text-white">
+                <h3 class="p-5 m-0">Chào bạn, <b>{{username}}</b></h3>
+            </div>
+        </div>
+        <footer class="text-center p-2 pt-4">
+            <p>Họ tên: <b>{{fullname}}</b></p>
+            <p>Email: <b>{{email}}</b></p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3a</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/poly.css">
+</head>
+
+<body ng-app="LabSPA">
+    <div class="container mt-2">
+        <nav class="row navbar navbar-expand-lg navbar-dark ftco-navbar-light" id="ftco-navbar">
+            <button class="col-md-12 navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav">
+                <span data-feather="menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav mr-auto pb-0">
+                    <li class="nav-item active">
+                        <a href="#!home" class="nav-link"><i data-feather="home" class="img"></i> Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#!thethao" class="nav-link"><i data-feather="feather" class="img"></i> Thể thao</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#!suckhoe" class="nav-link"><i data-feather="feather" class="img"></i> Sức khoẻ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#!sanpham" class="nav-link"><i data-feather="feather" class="img"></i> Sản phẩm</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+        <div class="row">
+            <div class="col text-white" ng-view></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>feather.replace()</script>
+    <script src="js/ex3a.js"></script>
+</body>
+
+
+</html>

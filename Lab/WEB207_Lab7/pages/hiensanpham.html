@@ -1,0 +1,31 @@
+<div class="row bg-dark">
+    <div class="col px-0">
+        <h4 class="text-white bg-primary p-3">
+            <i class="bi bi-list"></i> Danh sách hàng hoá
+        </h4>
+        <table class="table table-bordered table-condensed text-white mb-0">
+            <thead>
+                <tr class="text-uppercase">
+                    <th ng-click="sortBy('name')">SẢN PHẨM</th>
+                    <th ng-click="sortBy('price')">ĐƠN GIÁ</th>
+                    <th ng-click="sortBy('discount')">GIẢM GIÁ</th>
+                    <th ng-click="sortBy('date')">NGÀY</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="p in products|orderBy:sx|limitTo:pageSize:start">
+                    <td>{{p.name|uppercase}}</td>
+                    <td>{{p.price|currency}}</td>
+                    <td>{{p.discount|percentage:2}}</td>
+                    <td>{{p.date|date:"dd/MM/yyyy"}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="card-footer text-center mt-3">
+    <button class="btn btn-danger" ng-click="first()">Trang đầu</button>&nbsp;
+    <button class="btn btn-info" ng-click="prev()">Trang trước</button>&nbsp;
+    <button class="btn btn-info" ng-click="next()">Trang kế</button>&nbsp;
+    <button class="btn btn-danger" ng-click="last()">Trang cuối</button>
+</div>

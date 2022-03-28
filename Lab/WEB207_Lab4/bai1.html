@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Example 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="css/poly.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="js/ex1.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container w-50 pt-2">
+        <div class="card border-primary" ng-controller="myCtrl">
+            <div class="card-header bg-danger text-white">{{titleapp}}</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-dark">Tên đăng nhập: <b>{{sv.username}}</b></li>
+                <li class="list-group-item bg-dark">Họ và tên: <b>{{sv.fullname}}</b></li>
+                <li class="list-group-item bg-dark">Email: <b>{{sv.email}}</b></li>
+                <li class="list-group-item bg-dark">Giới tính: <b>{{sv.gender}}</b></li>
+                <li class="list-group-item bg-dark">Ngày sinh: <b>{{sv.birthday}}</b></li>
+                <li class="list-group-item bg-dark">Học phí: <b>{{sv.schoolfee}}</b></li>
+                <li class="list-group-item bg-dark">Điểm: <b>{{sv.marks}}</b></li>
+                <li class="list-group-item bg-dark text-muted">Phải: true là nam, false là nữ</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
